@@ -2,7 +2,7 @@
 FROM centos:7
 LABEL maintainer "Mario David <mariojmdavid@gmail.com>"
 
-COPY EGI-trustanchors.repo /etc/yum.repos.d/
+COPY EGI.repo /etc/yum.repos.d/
 RUN yum -y update && \
     yum -y install epel-release git && \
     yum -y update && \
