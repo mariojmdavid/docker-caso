@@ -18,5 +18,10 @@ RUN yum -y update && \
     cd caso && \
     pip install --upgrade pip && \
     pip install . && \
-    mkdir -p /etc/caso /var/spool/caso /var/spool/apel/outgoing/openstack
+    mkdir -p /etc/caso \
+             /etc/apel \
+             /var/spool/caso \
+             /var/spool/apel/outgoing/openstack \
+             /var/log/caso \
+             /var/log/apel
 
