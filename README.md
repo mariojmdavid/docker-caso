@@ -31,3 +31,7 @@ the cert and key for the server are ```/etc/grid-security/apelcert.pem``` and
 
 Check the scripts for more details.
 
+For more information about caso and configuration check
+
+https://caso.readthedocs.io/en/latest/
+
