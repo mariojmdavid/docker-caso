@@ -1,18 +1,22 @@
+# docker build --rm -t caso .
 FROM centos:7
+LABEL maintainer "Mario David <mariojmdavid@gmail.com>"
 
-COPY EGI-trustanchors.repo /etc/yum.repos.d/EGI-trustanchors.repo
+COPY EGI-trustanchors.repo /etc/yum.repos.d/
 RUN yum -y update && \
-    yum install epel-release git && \
+    yum -y install epel-release git && \
     yum -y update && \
     yum -y install \
-      python-pip \
+      apel-ssm \
       ca-certificates \
       ca-policy-egi-core \
-      ca-policy-lcg && \
+      ca-policy-lcg \
+      python-pip && \
+    yum clean all && \
     cd /home && \
     git clone https://github.com/alvarolopez/caso.git -b fix && \
     cd caso && \
     pip install --upgrade pip && \
     pip install . && \
     mkdir -p /etc/caso /var/spool/caso /var/spool/apel/outgoing/openstack
-    
+

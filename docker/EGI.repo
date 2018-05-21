@@ -1,0 +1,43 @@
+[EGI-trustanchors]
+name=EGI-trustanchors
+baseurl=http://repository.egi.eu/sw/production/cas/1/current/
+enabled=1
+gpgcheck=1
+gpgkey=http://repository.egi.eu/sw/production/cas/1/GPG-KEY-EUGridPMA-RPM-3
+
+[CMD-OS-1-base]
+name=CMD-OS 1 base (CentOS 7)
+baseurl=http://repository.egi.eu/sw/production/cmd-os/1/centos7/$basearch/base
+enabled=1
+gpgcheck=1
+protect=1
+priority=1
+gpgkey=http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
+
+[CMD-OS-1-updates]
+name=CMD-OS 1 updates (CentOS 7)
+baseurl=http://repository.egi.eu/sw/production/cmd-os/1/centos7/$basearch/updates
+enabled=1
+gpgcheck=1
+protect=1
+priority=1
+gpgkey=http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
+
+[CMD-OS-1-testing]
+name=CMD-OS 1 testing (CentOS 7)
+baseurl=http://repository.egi.eu/sw/testing/cmd-os/1/centos7/$basearch
+enabled=0
+gpgcheck=1
+protect=1
+priority=1
+gpgkey=http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
+
+[CMD-OS-1-untested]
+name=CMD-OS 1 untested (CentOS 7)
+baseurl=http://repository.egi.eu/sw/untested/cmd-os/1/centos7/$basearch
+enabled=0
+gpgcheck=1
+protect=1
+priority=1
+gpgkey=http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
+
